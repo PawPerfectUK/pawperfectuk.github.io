@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store Policies — PawPerfect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --bark: #3D2B1F;
+    --bark-light: #6B4C3B;
+    --sage: #7C9A7E;
+    --border: #E8E0D5;
+    --text-muted: #8C7B6E;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--bark); }
+  nav {
+    background: white; border-bottom: 1px solid var(--border);
+    padding: 0 2rem; display: flex; align-items: center; height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif; font-size: 1.4rem;
+    color: var(--bark); text-decoration: none;
+  }
+  .nav-logo span { color: var(--sage); }
+  .container { max-width: 780px; margin: 0 auto; padding: 4rem 2rem; }
+  .policy-nav { display: flex; gap: 0.75rem; margin-bottom: 3rem; flex-wrap: wrap; }
+  .policy-tab {
+    padding: 0.5rem 1.25rem; border-radius: 99px;
+    border: 1px solid var(--border); background: white;
+    font-size: 0.85rem; cursor: pointer; font-family: 'DM Sans', sans-serif;
+    color: var(--bark-light); transition: all 0.2s;
+  }
+  .policy-tab.active { background: var(--bark); color: white; border-color: var(--bark); }
+  .policy-section { display: none; }
+  .policy-section.active { display: block; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 0.5rem; }
+  .policy-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2.5rem; }
+  h2 { font-size: 1.1rem; font-weight: 500; margin: 2rem 0 0.75rem; }
+  p { color: var(--bark-light); line-height: 1.8; margin-bottom: 1rem; font-weight: 300; font-size: 0.95rem; }
+  ul { margin: 0 0 1rem 1.25rem; color: var(--bark-light); font-weight: 300; font-size: 0.95rem; }
+  li { margin-bottom: 0.4rem; line-height: 1.7; }
+  .highlight-box {
+    background: #EDF4ED; border-radius: 12px; padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0; border-left: 3px solid var(--sage);
+  }
+  .highlight-box p { color: var(--bark); margin: 0; font-weight: 400; }
+  a { color: var(--sage); }
+  footer-note { display: block; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted); }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Paw<span>Perfect</span></a>
+</nav>
+<div class="container">
+
+  <div class="policy-nav">
+    <button class="policy-tab active" onclick="show('returns', this)">Returns Policy</button>
+    <button class="policy-tab" onclick="show('shipping', this)">Shipping Info</button>
+    <button class="policy-tab" onclick="show('privacy', this)">Privacy Policy</button>
+    <button class="policy-tab" onclick="show('terms', this)">Terms of Service</button>
+    <button class="policy-tab" onclick="show('faq', this)">FAQs</button>
+  </div>
+
+  <!-- RETURNS -->
+  <div class="policy-section active" id="returns">
+    <h1>Returns Policy</h1>
+    <p class="policy-meta">Last updated: June 2026</p>
+    <div class="highlight-box"><p>🐾 We offer a 30-day no-questions-asked return policy on all orders.</p></div>
+    <h2>How to return an item</h2>
+    <p>If you're not completely happy with your purchase, you can return it within 30 days of receiving it. Here's how:</p>
+    <ul>
+      <li>Email us at hello@pawperfect.co.uk with your order number and reason for return</li>
+      <li>We'll reply within 24 hours with return instructions</li>
+      <li>Send the item back in its original packaging if possible</li>
+      <li>Once we confirm receipt, your refund is issued within 5–7 business days</li>
+    </ul>
+    <h2>What can be returned</h2>
+    <ul>
+      <li>Items in their original condition (unused or minimally used)</li>
+      <li>Items with original packaging where possible</li>
+      <li>Items reported within 30 days of delivery</li>
+    </ul>
+    <h2>What cannot be returned</h2>
+    <ul>
+      <li>Items that have been heavily used or damaged by misuse</li>
+      <li>Personalised or customised items (where applicable)</li>
+      <li>Consumables once opened</li>
+    </ul>
+    <h2>Damaged or incorrect items</h2>
+    <p>If you receive a damaged or incorrect item, please email us within 7 days with a photo. We will send a replacement or issue a full refund immediately — no need to return the original item.</p>
+    <h2>Refunds</h2>
+    <p>Refunds are issued to your original payment method. Please allow 5–7 business days for the refund to appear, depending on your bank or card provider.</p>
+    <h2>Return shipping costs</h2>
+    <p>For standard returns (change of mind), return postage is the customer's responsibility. For damaged, faulty, or incorrect items, we cover all return costs.</p>
+  </div>
+
+  <!-- SHIPPING -->
+  <div class="policy-section" id="shipping">
+    <h1>Shipping Information</h1>
+    <p class="policy-meta">Last updated: June 2026</p>
+    <div class="highlight-box"><p>🚚 Free UK delivery on all orders over £30. Standard delivery £3.99.</p></div>
+    <h2>Delivery times</h2>
+    <p>We ship all orders directly from our fulfilment partner. Please allow the following timeframes:</p>
+    <ul>
+      <li><strong>Standard UK delivery:</strong> 7–14 business days</li>
+      <li><strong>Expedited UK delivery:</strong> 5–8 business days (where available)</li>
+      <li><strong>International orders:</strong> 10–20 business days</li>
+    </ul>
+    <p>Delivery times are estimates and may vary during busy periods such as Christmas, Black Friday, or due to courier delays outside our control.</p>
+    <h2>Shipping costs</h2>
+    <ul>
+      <li>UK orders under £30: £3.99 standard shipping</li>
+      <li>UK orders over £30: Free standard shipping</li>
+      <li>International shipping: Calculated at checkout</li>
+    </ul>
+    <h2>Order tracking</h2>
+    <p>Once your order is dispatched, you'll receive an email with a tracking number. You can use this to track your parcel directly on the courier's website. If you don't receive a tracking email within 3 business days of ordering, please check your spam folder or contact us.</p>
+    <h2>Where we ship</h2>
+    <p>We currently ship to the UK, Republic of Ireland, and most of Europe. If your country isn't available at checkout, email us and we'll check if we can fulfil your order.</p>
+    <h2>Customs and import duties</h2>
+    <p>For international orders outside the UK, customs duties or import taxes may apply. These are the responsibility of the customer and are not included in our product prices or shipping costs.</p>
+    <h2>Lost or delayed parcels</h2>
+    <p>If your order hasn't arrived within 20 business days of dispatch, please contact us at hello@pawperfect.co.uk. We'll investigate immediately and either resend the order or issue a full refund.</p>
+  </div>
+
+  <!-- PRIVACY -->
+  <div class="policy-section" id="privacy">
+    <h1>Privacy Policy</h1>
+    <p class="policy-meta">Last updated: June 2026</p>
+    <p>PawPerfect ("we", "our", "us") is committed to protecting your personal information. This policy explains what data we collect, how we use it, and your rights.</p>
+    <h2>What data we collect</h2>
+    <ul>
+      <li><strong>Order information:</strong> Name, email address, delivery address, and phone number (required to process and deliver your order)</li>
+      <li><strong>Payment information:</strong> We do not store your card details. Payments are processed securely by Square or Stripe.</li>
+      <li><strong>Communication data:</strong> Emails you send us and newsletter subscriptions</li>
+      <li><strong>Website data:</strong> Anonymous browsing data via cookies (see Cookie Policy)</li>
+    </ul>
+    <h2>How we use your data</h2>
+    <ul>
+      <li>To process and fulfil your order</li>
+      <li>To send order confirmations and shipping updates</li>
+      <li>To respond to customer service enquiries</li>
+      <li>To send marketing emails (only with your consent, and you can unsubscribe at any time)</li>
+    </ul>
+    <h2>Who we share your data with</h2>
+    <p>We share your name and delivery address with our fulfilment supplier (CJDropshipping) for the sole purpose of shipping your order. We do not sell your data to third parties. We may share data with payment processors (Square, Stripe) and email service providers.</p>
+    <h2>How long we keep your data</h2>
+    <p>Order records are kept for 7 years (legal requirement for UK businesses). Email marketing preferences are kept until you unsubscribe. You can request deletion of your personal data at any time.</p>
+    <h2>Your rights (UK GDPR)</h2>
+    <ul>
+      <li>Right to access your personal data</li>
+      <li>Right to correct inaccurate data</li>
+      <li>Right to erasure ("right to be forgotten")</li>
+      <li>Right to object to marketing communications</li>
+      <li>Right to data portability</li>
+    </ul>
+    <p>To exercise any of these rights, email us at hello@pawperfect.co.uk.</p>
+    <h2>Contact</h2>
+    <p>For any privacy-related queries: hello@pawperfect.co.uk</p>
+  </div>
+
+  <!-- TERMS -->
+  <div class="policy-section" id="terms">
+    <h1>Terms of Service</h1>
+    <p class="policy-meta">Last updated: June 2026</p>
+    <p>By using this website and placing an order with PawPerfect, you agree to the following terms.</p>
+    <h2>1. About us</h2>
+    <p>PawPerfect is an online retail store selling pet accessories in the UK. By placing an order, you are entering into a contract with PawPerfect.</p>
+    <h2>2. Orders and payment</h2>
+    <p>All prices are in GBP and include VAT where applicable. We reserve the right to cancel orders in the event of pricing errors or stock unavailability. Payment is taken at the time of order. We accept major debit/credit cards and PayPal.</p>
+    <h2>3. Delivery</h2>
+    <p>We aim to deliver within the timeframes stated in our Shipping Policy. We are not liable for delays caused by couriers, customs, or events outside our control. Risk of loss passes to you upon delivery.</p>
+    <h2>4. Returns and refunds</h2>
+    <p>Please see our Returns Policy for full details. Your statutory rights under UK consumer law are not affected by this policy.</p>
+    <h2>5. Product descriptions</h2>
+    <p>We make every effort to ensure product descriptions and images are accurate. Slight colour variations may occur due to screen settings. If a product is significantly different from its description, contact us and we'll resolve it immediately.</p>
+    <h2>6. Intellectual property</h2>
+    <p>All content on this website, including text, images, and branding, is owned by PawPerfect or used with permission. You may not copy or reproduce content without our written consent.</p>
+    <h2>7. Limitation of liability</h2>
+    <p>PawPerfect is not liable for indirect losses arising from the use of our products beyond the purchase price paid. Our liability is limited to the value of your order.</p>
+    <h2>8. Governing law</h2>
+    <p>These terms are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of English courts.</p>
+    <h2>9. Changes to terms</h2>
+    <p>We may update these terms from time to time. Continued use of the website constitutes acceptance of any changes.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="policy-section" id="faq">
+    <h1>Frequently Asked Questions</h1>
+    <p class="policy-meta">Can't find what you need? Email hello@pawperfect.co.uk</p>
+
+    <h2>How long will my order take to arrive?</h2>
+    <p>Most UK orders arrive within 7–14 business days. We'll send you a tracking number as soon as your order is dispatched so you can follow its progress.</p>
+
+    <h2>Do you offer free delivery?</h2>
+    <p>Yes — standard UK delivery is free on orders over £30. Orders under £30 are £3.99 to ship.</p>
+
+    <h2>What if my item arrives damaged?</h2>
+    <p>Email us at hello@pawperfect.co.uk within 7 days with a photo of the damage. We'll send a replacement immediately or issue a full refund — your choice.</p>
+
+    <h2>Can I return an item?</h2>
+    <p>Yes, within 30 days of receiving your order. Items should be in original condition. Email us to initiate the return and we'll walk you through it.</p>
+
+    <h2>Do you ship outside the UK?</h2>
+    <p>We ship to the UK, Republic of Ireland, and most of Europe. Email us if you're not sure whether we deliver to your country.</p>
+
+    <h2>Are your products safe for pets?</h2>
+    <p>We prioritise pet-safe materials across all our listings. We avoid products with harmful dyes, BPA, or low-quality plastics. If you have specific allergy or material concerns, email us and we'll check the product spec sheet.</p>
+
+    <h2>What sizes are available?</h2>
+    <p>Sizing varies by product — full size guides are listed on each product page. If you're unsure, email us with your pet's measurements and we'll recommend the right size.</p>
+
+    <h2>Can I change or cancel my order?</h2>
+    <p>If you need to change or cancel an order, contact us within 12 hours of placing it. After this point, orders may already be in fulfilment and we may not be able to stop the shipment.</p>
+
+    <h2>How do I contact you?</h2>
+    <p>Email us at hello@pawperfect.co.uk. We reply to all enquiries within 24 hours, Monday to Saturday.</p>
+  </div>
+
+</div>
+
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.policy-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.policy-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
